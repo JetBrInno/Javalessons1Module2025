@@ -1,9 +1,11 @@
 package org.example.Lesson9;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import java.util.Objects;
 
+@XmlRootElement
 public class BannedUser {
 
     @JsonProperty("class")
