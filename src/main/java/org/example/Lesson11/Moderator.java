@@ -17,6 +17,4 @@ public class Moderator extends BaseUser {
     public void ban(String name) {
         System.out.println("Пользователь " + name + " забанен (by " + this.name + ")");
     }
-
-
 }

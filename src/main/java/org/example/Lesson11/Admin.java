@@ -1,6 +1,13 @@
 package org.example.Lesson11;
 
-public class Admin extends Moderator {
+import org.example.Lesson6.EmployeeL6;
+import org.example.Lesson6.Notifier;
+
+import javax.sql.RowSet;
+import javax.sql.rowset.Predicate;
+import java.sql.SQLException;
+
+public class Admin extends Moderator implements Notifier, Predicate {
 
     public Admin(int id, String name) {
         super(id, name); // выполняет конструктор родителя
@@ -23,5 +30,30 @@ public class Admin extends Moderator {
         System.out.println("Фэйс контроль");
         System.out.println("Отпечаток пальца");
         System.out.println("Модератор вошел в систему");
+    }
+
+    @Override
+    public boolean evaluate(RowSet rs) {
+        return false;
+    }
+
+    @Override
+    public boolean evaluate(Object value, int column) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean evaluate(Object value, String columnName) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public void send(String text, EmployeeL6 employee) {
+
+    }
+
+    @Override
+    public boolean auth(EmployeeL6 employee) {
+        return false;
     }
 }
