@@ -13,7 +13,7 @@ public class VK {
     public static void on(Role role) {
         Moderator superUser;
         if (role == Role.ADMIN) {
-            superUser = new Moderator(1, "abcbagds");
+            superUser = new Moderator(1, "другоесловое(мастер)");
         }
         else {
             superUser = new Moderator(123,"запасноймодератор");
