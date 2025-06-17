@@ -13,6 +13,7 @@ public class VK {
         Moderator superUser;
         if (role == Role.MODERATOR) {
             superUser = new Moderator(1, "abcbagds");
+            System.out.println("хэйхэй");
         }
         else if (role == Role.ADMIN) {
             superUser = new Admin(5, "admin");
@@ -24,5 +25,10 @@ public class VK {
             superUser = new Moderator(123,"запасноймодератор");
         }
         superUser.auth("abc","123");
+    }
+
+
+    public static void newMethod() {
+        System.out.println("Какой-то метод");
     }
 }
