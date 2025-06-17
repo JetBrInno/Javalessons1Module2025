@@ -7,19 +7,14 @@ import org.example.Lesson12.Role;
 public class VK {
     public static void main(String[] args) {
         on(Role.MODERATOR);
+        System.out.println("еше какой то текст");
     }
 
     public static void on(Role role) {
         Moderator superUser;
-        if (role == Role.MODERATOR) {
+        if (role == Role.ADMIN) {
             superUser = new Moderator(1, "abcbagds");
             System.out.println("хэйхэй");
-        }
-        else if (role == Role.ADMIN) {
-            superUser = new Admin(5, "admin");
-        }
-        else if (role == Role.SUPERADMIN) {
-            superUser = new Admin(12, "superadmin");
         }
         else {
             superUser = new Moderator(123,"запасноймодератор");
